@@ -1,0 +1,13 @@
+nav ul li{
+  display: inline-block;
+  width: 30%;
+  text-align: center;
+  font-size: 40px;
+  background-color: LightGrey;
+  font-family: Arial 
+}
+
+nav a{
+  text-decoration: none;
+  color: darkblue
+}
