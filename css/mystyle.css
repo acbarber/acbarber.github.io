@@ -1,13 +1,95 @@
-nav ul li{
-  display: inline-block;
-  width: 30%;
-  text-align: center;
-  font-size: 40px;
-  background-color: LightGrey;
-  font-family: Arial 
+body{
+  font-family: 'Roboto Slab', serif;
 }
 
+header{
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  min-height: 25vh;
+  margin:0;
+  padding: 0;
+}
+
+.home{
+  background-image: url(../images/background.jpeg);
+}
+.education{
+  background-image: url(../images/education.jpg);
+}
+.employment {
+  background-image: url(../images/employment.jpg);
+}
+
+.extracurricular{
+  background-image: url(../images/extracurricularheader.jpg);
+}
+
+header h1{
+  font-size:15vh;
+  color: white;
+  text-align: center;
+}
+nav {
+  margin: 0;
+  padding: 0;
+}
+
+nav ul li{
+  display: inline-block;
+  width: 24%;
+  text-align: center;
+  font-size:6vh;
+  background-color: LightGrey;
+  min-height: 100%;
+}
+
+nav ul li:hover{
+  display: inline-block;
+  width: 26%;
+  text-align: center;
+  font-size: 6.5vh;
+  background-color: LightGrey;
+  min-height: 100%;
+}
 nav a{
   text-decoration: none;
-  color: darkblue
+  color: black;
+}
+
+.homemain{
+  display: grid;
+  grid-template-columns: 7.5% 40% 5% 40% 7.5%;
+  grid-template-rows: 50% 50%
+}
+.aboutme{
+  grid-column-start:2;
+  grid-row-start:1;
+}
+h2 {
+  font-size: 5vh;
+}
+p{
+  text-indent: 2vw;
+  font-size: 2.5vh;
+}
+.resume{
+  grid-column-start: 4;
+  grid-row-start:1;
+  grid-row-end: 3
+}
+embed{
+  width:100%;
+  height:100vh;
+}
+.skills{
+  grid-column-start:2;
+  grid-column-end: 5;
+  grid-row-start:2;
+  font-size: 2.5vh;
+}
+footer{
+  background-color: LightGrey;
+  height: 50%;
+  font-size: 2.5vh;
 }
