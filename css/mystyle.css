@@ -1,7 +1,6 @@
 body{
   font-family: 'Roboto Slab', serif;
 }
-
 header{
   background-size: cover;
   background-position: center;
@@ -10,7 +9,6 @@ header{
   margin:0;
   padding: 0;
 }
-
 .home{
   background-image: url(../images/background.jpeg);
 }
@@ -24,7 +22,6 @@ header{
 .extracurricular{
   background-image: url(../images/extracurricularheader.jpg);
 }
-
 header h1{
   font-size:15vh;
   color: white;
@@ -33,39 +30,41 @@ header h1{
 nav {
   margin: 0;
   padding: 0;
-  background-color: LightGrey;
 
 }
-
 nav ul li{
-  display: inline-block;
-  width: 24%;
+  display: block;
+  width: 96%;
+  margin: 1vh;
   text-align: center;
   font-size:6vh;
+  background-color: DarkGrey;
   min-height: 100%;
 }
-
 nav ul li:hover{
-  display: inline-block;
-  width: 26%;
+  display: block;
+  width: 96%;
+  margin: 1vh;
   text-align: center;
-  font-size: 6.5vh;
+  font-size: 6vh;
   background-color: LightGrey;
   min-height: 100%;
 }
 nav a{
   text-decoration: none;
-  color: black;
+  color: white;
 }
 
+nav a:hover{
+  text-decoration: none;
+  color: black;
+}
 .homemain{
   display: grid;
-  grid-template-columns: 7.5% 40% 5% 40% 7.5%;
-  grid-template-rows: 50% 50%
+  grid-template-columns: 5% 90% 5%;
 }
 .aboutme{
   grid-column-start:2;
-  grid-row-start:1;
 }
 h2 {
   font-size: 5vh;
@@ -75,9 +74,7 @@ p{
   font-size: 2.5vh;
 }
 .resume{
-  grid-column-start: 4;
-  grid-row-start:1;
-  grid-row-end: 3
+  grid-column-start: 2;
 }
 embed{
   width:100%;
@@ -85,12 +82,76 @@ embed{
 }
 .skills{
   grid-column-start:2;
-  grid-column-end: 5;
-  grid-row-start:2;
   font-size: 2.5vh;
 }
 footer{
-  background-color: LightGrey;
+  background-color: DarkGrey;
   height: 50%;
-  font-size: 2.5vh;
+  font-size: 10vh;
+}
+footer li{
+  display: inline-block;
+  width: 30%;
+  text-align: center;
+}
+
+footer a{
+  color: black;
+}
+footer a:hover{
+  color: LightGrey;
+}
+@media only screen and (orientation: landscape){
+  nav ul li{
+    display: inline-block;
+    width: 48%;
+    margin: 1vh auto;
+  }
+  nav ul li:hover{
+    display: inline-block;
+    width: 48%;
+    margin: 1vh auto;
+  }
+}
+
+@media only screen and (min-width: 750px){
+  nav ul li{
+    display: inline-block;
+    width: 48%;
+    margin: 1vh auto;
+  }
+  nav ul li:hover{
+    display: inline-block;
+    width: 48%;
+    margin: 1vh auto;
+  }
+  .homemain{
+    display: grid;
+    grid-template-columns: 7.5% 40% 5% 40% 7.5%;
+    grid-template-rows: 50% 50%
+  }
+  .aboutme{
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 1;
+  }
+  .resume{
+    grid-column-start: 4;
+    grid-row-start: 1;
+    grid-row-end: 3;
+  }
+  .skills{
+    grid-column-start:2;
+    grid-row-start: 2;
+    font-size: 2.5vh;
+  }
+}
+@media only screen and (min-width: 1200px){
+  nav ul li{
+    width: 24%;
+  }
+
+  nav ul li:hover{
+    width: 24%;
+  }
 }
