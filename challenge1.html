@@ -5,13 +5,13 @@
     <style>
     #emailfield {
     	display: none;
-    }
+    }   
     </style>
 
 <!--     COLLEEN - MAKE SURE TO INCLUDE THIS LINE
- -->
+ -->    
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-
+    
   </head>
   <body>
     <h1>Challenge One</h1>
@@ -28,7 +28,7 @@
 
         <div id="emailfield">
           <label>
-            Email Address:
+            Email Address: 
             <input type="text" name="email" id="email">
           </label>
         </div>
@@ -40,7 +40,7 @@
 <!-- COLLEEN - Listen to the element with the id of 'subscribe'
 The toggle can take slow or fast. -->
     <script>
-      $( "#subscribe" ).submit(function() {
+      $( "#subscribe" ).click(function() {
           $( "#emailfield" ).toggle("slow");
       });
     </script>
