@@ -85,6 +85,10 @@ p{
 .resume{
   grid-column-start: 2;
 }
+.resumetab{
+  text-decoration: none;
+  font-size: 2vh;
+}
 embed{
   width:100%;
   height:100vh;
