@@ -11,7 +11,7 @@ header{
 }
 .home{
   background-image: url(../images/background.jpeg);
-  background-position: black;
+  background-color: black;
 }
 .education{
   background-image: url(../images/education.jpg);
