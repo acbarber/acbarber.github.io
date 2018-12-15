@@ -27,7 +27,7 @@
       <div id='gallery'>
           <figure id='acragold'>
             <a href='./images/acragold.jpg' data-lightbox='rowing' title='Me and the 2015 Michigan Mens Lightweight 4+ winning the ACRA National Championship Gold Medal' aria-label='My rowing team winning ACRA gold'>
-              <img src="./images/acragold.jpg" alt="ACRA Gold">
+              <img src="./images/acragold.jpg" alt="ACRA Gold pic">
             </a>
           </figure>
           <figure id='dadvail'>
@@ -42,17 +42,17 @@
           </figure>
           <figure id='chili'>
             <a href='./images/chili.jpg' data-lightbox='cooking' data-title="For my favorite chili recipe. <a href='https://www.allrecipes.com/recipe/13423/my-chili/'>Check it out here!</a>" aria-label='My favorite chili recipe'>
-              <img src="./images/chili.jpg" alt="Chili">
+              <img src="./images/chili.jpg" alt="Chili pic">
             </a>
           </figure>
           <figure id='canyon'>
             <a href='./images/from_below.png' data-lightbox='hiking' title='Coming back from a 6 mile hike to the bottom of the Grand Canyon. The second half was definitely the hardest but the views made it worth it!' aria-label='Six mile walk down to bottom of the grand canyon'>
-              <img src='./images/from_below.png' alt='Grand Canyon'>
+              <img src='./images/from_below.png' alt='Grand Canyon pic'>
             </a>
           </figure>
           <figure id='chipotle'>
             <a href='./images/chipotle-chicken.jpg' data-lightbox='cooking' data-title="This copycat Chipotle chicken recipe probably tastes better than the real thing. <a href='https://www.browneyedbaker.com/chipotle-chicken-recipe/'>Check it out!</a>" aria-label='Chipotle chicken recipe'>
-              <img src='./images/chipotle-chicken.jpg' alt='Chipotle Chicken Recipe'>
+              <img src='./images/chipotle-chicken.jpg' alt='Chipotle Chicken Recipe pic'>
             </a>
           </figure>
         </div>
@@ -69,6 +69,16 @@
     $('#content').load('index.html.home',function(){}).hide().fadeIn(2000);
     $('.pn').click(function(){
       alert('(734)-476-3312')
+    });
+    $('a').focus(function(){
+      $(this).css({"border-color": "black",
+             "border-width":"5px",
+             "border-style":"solid"});
+    });
+    $('a').blur(function(){
+      $(this).css({"border-color": "none",
+             "border-width":"none",
+             "border-style":"none"});
     });
     </script>
     <script src="lightbox2-master/lightbox2-master/dist/js/lightbox.js"></script>

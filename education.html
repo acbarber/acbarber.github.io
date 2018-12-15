@@ -80,6 +80,16 @@
     $('.pn').click(function(){
       alert('(734)-476-3312')
     });
+    $('a').focus(function(){
+      $(this).css({"border-color": "black",
+             "border-width":"5px",
+             "border-style":"solid"});
+    });
+    $('a').blur(function(){
+      $(this).css({"border-color": "none",
+             "border-width":"none",
+             "border-style":"none"});
+    });
     </script>
 
   </body>
