@@ -11,16 +11,20 @@ header{
 }
 .home{
   background-image: url(../images/background.jpeg);
+  background-position: black;
 }
 .education{
   background-image: url(../images/education.jpg);
+  background-color: black;
 }
 .employment {
   background-image: url(../images/employment.jpg);
+  background-color: black;
 }
 
 .extracurricular{
   background-image: url(../images/extracurricularheader.jpg);
+  background-color: black;
 }
 header h1{
   font-size:12vh;
