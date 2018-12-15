@@ -2,56 +2,85 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="stylesheet" type="text/css" href="./css/mystyle.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css?family=Roboto+Slab" rel="stylesheet">
 
     <title>Education</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
   </head>
   <body>
+    <a href='#content'>Jump to Content</a>
     <header class='education'>
       <nav>
         <ul>
-          <li><a href='index.html'>Home Page</a></li>
-          <li><a href="education.html">Education</a></li>
-          <li><a href="employment.html">Employment</a></li>
-          <li><a href="extracurriculars.html">Extracurriculars</a></li>
+          <a href='index.html'><li>Home Page</li></a>
+          <a href="education.html"><li class='current'>Education</li></a>
+          <a href="employment.html"><li>Employment</li></a>
+          <a href="extracurriculars.html"><li>Extracurriculars<li></a>
         </ul>
       </nav>
       <h1>Education</h1>
     </header>
-    <main>
+    <main id='content'>
       <section>
         <h2>Master of Health Informatics | University of Michigan School of Information and School of Public Health, Expected Graduation - April, 2019</h2>
-        <img src="./images/umsilogo.png" alt="UMSI Logo">
-          <h3>Notable Courses:</h3>
-            <ul>
-              <li>SI 618 - Data Manipulation</li>
-              <li>SI 650 - Information Retrieval</li>
-              <li>SI 539 - Design of Complex Websites</li>
-            </ul>
+        <div id='grad'>
+          <div id='umsi'>
+            <img src="./images/umsilogo.png" alt="UMSI Logo">
+          </div>
+          <div id='courses'>
+            <h3>Notable Courses:</h3>
+              <ul>
+                <li>SI 618 - Data Manipulation</li>
+                <li>SI 650 - Information Retrieval</li>
+                <li>SI 539 - Design of Complex Websites</li>
+              </ul>
+          </div>
+          <div id='coursework'>
             <h3>Coursework:</h3>
               <a href='https://github.com/SI507-Waiver-Fall2018/si-507-waiver-assignment-f18-acbarber'>Github: SI 507 - Intermediate Programming Waiver Assignment</a>
-        </section>
+              <!-- <div><img src='./images/acragold.jpg'></div> -->
+                <!-- <li id='code'><div><embed src='./images/final_project.ipynb'></div></li>
+                <li id='eighteen'><div><embed src='./images/si618final_report.pdf'></div></li> -->
+          </div>
+        </div>
+      </section>
 
-        <section>
-          <h2>Bachelor of Science, Neuroscience | University of Michigan School of Literature, Science and the Arts, Graduated - April, 2017</h2>
-          <img src="./images/lsalogo.png" alt="LSA Logo">
+      <section>
+        <h2>Bachelor of Science, Neuroscience | University of Michigan School of Literature, Science and the Arts, Graduated - April, 2017</h2>
+        <div id='undergrad'>
+          <div id='lsa'>
+            <img src="./images/lsalogo.png" alt="LSA Logo">
+          </div>
+          <div id='lsacourses'
             <h3>Notable Courses:</h3>
               <ul>
                 <li>MCDB 402 - Molecular Biology of Pain and Sensation</li>
                 <li>BIOLOGY 305 - Genetics</li>
                 <li>BIOLCHEM 415 - Introduction to Biochemistry</li>
               </ul>
-        </section>
-      </main>
+          </div>
+        </div>
+      </section>
       <footer>
           <ul>
-            <li><a href="mailto:acbarber@umich.edu"><i class="fas fa-envelope-square"></i></a></li>
-            <li><a href='tel: +17344763312'><i class="fas fa-phone-square"></i></a></li>
-            <li><a href= "www.linkedin.com/in/andrew-barber-72a849149/"><i class="fab fa-linkedin" ></i></a></li>
+            <li><a href="mailto:acbarber@umich.edu"><i class="fas fa-envelope-square" aria-label='Email'></i> Email</a></li>
+            <li><a href='tel:+17344763312' class='pn'><i class="fas fa-phone-square" aria-label="Phone Number"></i> Phone</a></li>
+            <li><a href= "https://www.linkedin.com/in/andrew-barber-72a849149/"><i class="fab fa-linkedin" aria-label='Linkedin'></i> Linkedin</a></li>
           </ul>
       </footer>
+
+    </main>
+    <script>
+    $('.education').load('index.html.home',function(){}).hide().fadeIn(1000);
+    $('#content').load('index.html.home',function(){}).hide().fadeIn(2000);
+    $('.pn').click(function(){
+      alert('(734)-476-3312')
+    });
+    </script>
 
   </body>
 </html>

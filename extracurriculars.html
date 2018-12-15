@@ -2,58 +2,75 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="stylesheet" type="text/css" href="./css/mystyle.css">
+    <link href="lightbox2-master/lightbox2-master/dist/css/lightbox.css" rel="stylesheet">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css?family=Roboto+Slab" rel="stylesheet">
-    <title>Extracurriculars/Interests</title>
+    <title>Extracurriculars & Interests</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   </head>
   <body>
+    <a href='#content'>Jump to content</a>
     <header class='extracurricular'>
       <nav>
         <ul>
-          <li><a href='index.html'>Home Page</a></li>
-          <li><a href="education.html">Education</a></li>
-          <li><a href="employment.html">Employment</a></li>
-          <li><a href="extracurriculars.html">Extracurriculars</a></li>
+          <a href='index.html'><li>Home Page</li></a>
+          <a href="education.html"><li>Education</li></a>
+          <a href="employment.html"><li>Employment</li></a>
+          <a href="extracurriculars.html"><li class='current'>Extracurriculars<li></a>
         </ul>
       </nav>
-      <h1>Extracurriculars/Interests</h1>
+      <h1>Extracurriculars & Interests</h1>
     </header>
-    <main>
-      <section>
-        <h2>Michigan Men's Rowing Team</h2>
-          <figure>
-            <img src="./images/acragold.jpg" alt="ACRA Gold">
-            <figcaption>Me and the 2015 Michigan Men's Lightweight 4+ winning the ACRA National Championship Gold Medal</figcaption>
+    <main id='content'>
+      <div id='gallery'>
+          <figure id='acragold'>
+            <a href='./images/acragold.jpg' data-lightbox='rowing' title='Me and the 2015 Michigan Mens Lightweight 4+ winning the ACRA National Championship Gold Medal'>
+              <img src="./images/acragold.jpg" alt="ACRA Gold">
+            </a>
           </figure>
-          <figure>
-            <img src="./images/dadvailpic.jpg" alt="Dad Vail Pic">
-            <figcaption>Me and the 2015 Michigan Men's Lightweight 4+ at the Dad Vail Regatta</figcaption>
+          <figure id='dadvail'>
+            <a href='./images/dadvailpic.jpg' data-lightbox='rowing' title='Rowing in the bow-seat at the 2015 Dad Vail Regatta: the largest collegiate regatta in the world'>
+              <img src="./images/dadvailpic.jpg" alt="Dad Vail Pic">
+            </a>
           </figure>
-      </section>
-
-      <section>
-        <h2>Hiking</h2>
-          <figure>
-            <img src="./images/hikingpic.jpg" alt="Hiking Pic">
-            <figcaption>Me and my friend hiking at Pictured Rocks National Lakeshore</figcaption>
+          <figure id='hiking'>
+            <a href='./images/hikingpic.jpg' data-lightbox='hiking' title='My friend and I hiking at Pictured Rocks National Lakeshore in upper Michigan'>
+              <img src="./images/hikingpic.jpg" alt="Hiking Pic">
+            </a>
           </figure>
-      </section>
-
-      <section>
-        <h2>Cooking</h2>
-          <figure>
-            <img src="./images/chili.jpg" alt="Chili">
-            <figcaption>I'm not alway successful but I love to cook! My favorite food to make is definitely chili. You can find my go-to recipe right here: <a href="https://www.allrecipes.com/recipe/13423/my-chili/">The Best Chili Recipe</a></figcaption>
+          <figure id='chili'>
+            <a href='./images/chili.jpg' data-lightbox='cooking' data-title="For my favorite chili recipe, check it out <a href='https://www.allrecipes.com/recipe/13423/my-chili/'>here</a>">
+              <img src="./images/chili.jpg" alt="Chili">
+            </a>
           </figure>
-      </section>
+          <figure id='canyon'>
+            <a href='./images/from_below.png' data-lightbox='hiking' title='Coming back from a 6 mile hike to the bottom of the Grand Canyon. The second half was definitely the hardest but the views made it worth it!'>
+              <img src='./images/from_below.png'>
+            </a>
+          </figure>
+          <figure id='chipotle'>
+            <a href='./images/chipotle-chicken.jpg' data-lightbox='cooking' data-title="This copycat Chipotle chicken recipe probably tastes better than the real thing. <a href='https://www.browneyedbaker.com/chipotle-chicken-recipe/'>Check it out!</a>">
+              <img src='./images/chipotle-chicken.jpg'>
+            </a>
+          </figure>
+        </div>
+      <footer>
+          <ul>
+            <li><a href="mailto:acbarber@umich.edu"><i class="fas fa-envelope-square" aria-label='Email'></i> Email</a></li>
+            <li><a href='tel:+17344763312' class='pn'><i class="fas fa-phone-square" aria-label="Phone Number"></i> Phone</a></li>
+            <li><a href= "https://www.linkedin.com/in/andrew-barber-72a849149/"><i class="fab fa-linkedin" aria-label='Linkedin'></i> Linkedin</a></li>
+          </ul>
+      </footer>
     </main>
-    <footer>
-        <ul>
-          <li><a href="mailto:acbarber@umich.edu"><i class="fas fa-envelope-square"></i></a></li>
-          <li><a href='tel: +17344763312'><i class="fas fa-phone-square"></i></a></li>
-          <li><a href= "www.linkedin.com/in/andrew-barber-72a849149/"><i class="fab fa-linkedin" ></i></a></li>
-        </ul>
-    </footer>
+    <script>
+    $('.extracurricular').load('index.html.home',function(){}).hide().fadeIn(1000);
+    $('#content').load('index.html.home',function(){}).hide().fadeIn(2000);
+    $('.pn').click(function(){
+      alert('(734)-476-3312')
+    });
+    </script>
+    <script src="lightbox2-master/lightbox2-master/dist/js/lightbox.js"></script>
   </body>
 </html>

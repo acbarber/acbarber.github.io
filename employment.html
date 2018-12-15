@@ -7,21 +7,23 @@
     <link href="https://fonts.googleapis.com/css?family=Roboto+Slab" rel="stylesheet">
 
     <title>Employment History</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
   </head>
   <body>
 
     <header class= 'employment'>
       <nav>
         <ul>
-          <li><a href='index.html'>Home Page</a></li>
-          <li><a href="education.html">Education</a></li>
-          <li><a href="employment.html">Employment</a></li>
-          <li><a href="extracurriculars.html">Extracurriculars</a></li>
+          <a href='index.html'><li>Home Page</li></a>
+          <a href="education.html"><li>Education</li></a>
+          <a href="employment.html"><li class='current'>Employment</li></a>
+          <a href="extracurriculars.html"><li>Extracurriculars<li></a>
         </ul>
       </nav>
       <h1>Employment History</h1>
     </header>
-    <main>
+    <main id='content'>
       <section>
         <h2>College of Healthcare Information Management Executives (CHIME), May, 2018 - Present</h2>
         <img src="./images/chimelogo.jpeg" alt='CHIME Logo'>
@@ -41,13 +43,21 @@
             <li>Awarded William Whelan Named Intern (May, 2016)</li>
           </ul>
       </section>
+      <footer>
+          <ul>
+            <li><a href="mailto:acbarber@umich.edu"><i class="fas fa-envelope-square" aria-label='Email'></i> Email</a></li>
+            <li><a href='tel:+17344763312' class='pn'><i class="fas fa-phone-square" aria-label="Phone Number"></i> Phone</a></li>
+            <li><a href= "https://www.linkedin.com/in/andrew-barber-72a849149/"><i class="fab fa-linkedin" aria-label='Linkedin'></i> Linkedin</a></li>
+          </ul>
+      </footer>
     </main>
-    <footer>
-        <ul>
-          <li><a href="mailto:acbarber@umich.edu"><i class="fas fa-envelope-square"></i></a></li>
-          <li><a href='tel: +17344763312'><i class="fas fa-phone-square"></i></a></li>
-          <li><a href= "www.linkedin.com/in/andrew-barber-72a849149/"><i class="fab fa-linkedin" ></i></a></li>
-        </ul>
-    </footer>
+
+    <script>
+    $('.employment').load('index.html.home',function(){}).hide().fadeIn(1000);
+    $('#content').load('index.html.home',function(){}).hide().fadeIn(2000);
+    $('.pn').click(function(){
+      alert('(734)-476-3312')
+    });
+    </script>
   </body>
 </html>
